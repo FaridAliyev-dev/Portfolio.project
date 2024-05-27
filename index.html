@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farid Aliyev - Frontend Developer</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="https://kit.fontawesome.com/470cd44947.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/assets/imgs/Logo.jpg">
+</head>
+
+
+<body id="body-scroll">
+  <header>
+    <a href="#body-scroll">
+      <div class="logo">FA</div>
+    </a>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <ul>
+        <li><a href="#body-scroll">Home</a></li>
+        <li><a href="#story">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
+
+  <section id="profile">
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Farid Aliyev</h1>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const title = document.querySelector('.title');
+          document.addEventListener('mousemove', function (event) {
+            const offsetX = event.clientX / window.innerWidth - 0.5;
+            const offsetY = event.clientY / window.innerHeight - 0.5;
+            title.style.transform = `translate(${offsetX * 70}px, ${offsetY * 40}px)`;
+          });
+        });
+      </script>
+      <p class="section__text__p2">Frontend Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('/assets/CV.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#story'">
+          About me
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="/assets/imgs/linkedin-logo.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/farid-aliyev-455133203/'" />
+        <img src="/assets/imgs/github-logo.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/FaridAliyev-coder'" />
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="profile-container" data-tilt="" data-tilt-full-page-listening="" data-tilt-max="1" data-tilt-speed="1"
+      data-tilt-perspective="500" data-tilt-reset-to-start="true" data-tilt-glare="" data-tilt-max-glare="0.8">
+      <div class="profile-glass-container">
+        <div class="profile-header">
+          <h1 class="profile-greeting">Greetings!</h1>
+          <h2 class="profile-name">I'm Farid Aliyev</h2>
+        </div>
+        <div class="profile-content">
+          <p class="profile-intro">
+            <i class="fas fa-user"></i>
+            A passionate and detail-oriented front-end developer based in Azerbaijan. I blend creativity with
+            technical prowess to deliver impactful digital solutions.
+          </p>
+
+          <h3 class="profile-section-title">
+            <i class="fas fa-rocket"></i>
+            My Journey
+          </h3>
+          <p class="profile-text">
+            I began with HTML, CSS, and JavaScript, discovering the power of code in transforming ideas into
+            interactive realities. Over time, I've honed my skills across a diverse tech stack, including C# and
+            Python.
+          </p>
+
+          <h3 class="profile-section-title">
+            <i class="fas fa-users"></i>
+            Collaboration & Innovation
+          </h3>
+          <p class="profile-text">
+            I thrive in collaborative environments, brainstorming innovative solutions and translating them into
+            elegant designs. I approach each task with enthusiasm and a commitment to excellence.
+          </p>
+
+          <h3 class="profile-section-title">
+            <i class="fas fa-music"></i>
+            Beyond Development
+          </h3>
+          <p class="profile-text">
+            Outside development, I enjoy music, exploring intricate melodies, and delving into literature, where
+            stories become windows to diverse perspectives.
+          </p>
+
+          <h3 class="profile-section-title">
+            <i class="fas fa-forward"></i>
+            Looking Forward
+          </h3>
+          <p class="profile-text">
+            Driven by a relentless pursuit of growth and a passion for creating meaningful experiences, I'm excited to
+            embark on new challenges and contribute to projects that push the boundaries of possibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="carousel">
+      <div class="carousel-item active">
+        <h3><i class="fas fa-shopping-cart"></i> Project 1: E-Commerce Website</h3>
+        <p>Developed a fully functional e-commerce website with a user-friendly interface and robust backend.</p>
+        <ul>
+          <li><i class="fas fa-laptop-code"></i> Implemented responsive design using HTML, CSS, and JavaScript</li>
+          <li><i class="fas fa-box-open"></i> Built product pages, shopping cart, and checkout system</li>
+          <li><i class="fas fa-lock"></i> Integrated payment gateway for secure transactions</li>
+          <li><i class="fas fa-tools"></i> Developed an admin panel for managing products, orders, and users</li>
+          <li><i class="fas fa-tachometer-alt"></i> Optimized website performance and SEO</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <h3><i class="fas fa-comments"></i> Project 2: Social Media App</h3>
+        <p>Created a social media application with real-time messaging and post sharing features.</p>
+        <ul>
+          <li><i class="fas fa-user"></i> Designed user profiles, news feed, and notifications</li>
+          <li><i class="fas fa-comments"></i> Implemented real-time chat using WebSocket</li>
+          <li><i class="fas fa-key"></i> Integrated third-party APIs for authentication and data fetching</li>
+          <li><i class="fas fa-shield-alt"></i> Ensured data security and privacy compliance</li>
+          <li><i class="fas fa-cloud"></i> Deployed the app on AWS for scalability and reliability</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <h3><i class="fas fa-briefcase"></i> Project 3: Portfolio Website</h3>
+        <p>Built a personal portfolio website to showcase my projects and skills.</p>
+        <ul>
+          <li><i class="fas fa-paint-brush"></i> Designed a clean and modern user interface</li>
+          <li><i class="fas fa-mouse-pointer"></i> Implemented interactive elements using JavaScript</li>
+          <li><i class="fas fa-tachometer-alt"></i> Optimized website for performance and accessibility</li>
+          <li><i class="fas fa-envelope"></i> Integrated a contact form with email notifications</li>
+          <li><i class="fas fa-upload"></i> Deployed the website using GitHub Pages</li>
+        </ul>
+      </div>
+      <div class="carousel-item">
+        <h3><i class="fas fa-tasks"></i> Project 4: Task Management Tool</h3>
+        <p>Developed a task management tool to help users organize and prioritize their tasks.</p>
+        <ul>
+          <li><i class="fas fa-arrows-alt"></i> Designed user-friendly interface with drag-and-drop functionality</li>
+          <li><i class="fas fa-edit"></i> Implemented task creation, editing, and deletion features</li>
+          <li><i class="fas fa-user-shield"></i> Integrated user authentication and authorization</li>
+          <li><i class="fas fa-server"></i> Developed a RESTful API for data management</li>
+          <li><i class="fas fa-cloud-upload-alt"></i> Deployed the tool on Heroku for easy access</li>
+        </ul>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button id="prev" class="carousel-btn">&#10094;</button>
+      <button id="next" class="carousel-btn">&#10095;</button>
+    </div>
+  </section>
+
+  <div class="container-globe">
+    <img src="https://github.githubassets.com/images/modules/site/home/hero-glow.svg" alt="Glowing universe"
+      class="background-lights">
+    <div id="globeCanvas">
+    </div>
+  </div>
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services-container">
+      <div class="service-item">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Building responsive and dynamic websites.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-paint-brush"></i>
+        <h3>UI/UX Design</h3>
+        <p>Creating user-friendly and engaging interfaces.</p>
+      </div>
+      <div class="service-item">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Development</h3>
+        <p>Developing mobile applications for various platforms.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <form action="https://formspree.io/f/xdoqjvkr" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Your Name Here">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter Your Email Here">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Enter Your Text Here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-color-1">Send</button>
+    </form>
+  </section>
+
+  <script src="/assets/js/carousel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/assets/js/spinning-globe.js"></script>
+<script>
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+  
+
+  document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const checkbox = document.getElementById('nav_check');
+      checkbox.checked = false; // Close the navbar
+    });
+  });
+});
+
+</script>
+
+  <div class="footer-bottom">
+    <p>copyright &copy;2024 faliyev. designed by <span>Farid Aliyev</span></p>
+  </div>
+</footer>
+
+</body>
+
+</html>
