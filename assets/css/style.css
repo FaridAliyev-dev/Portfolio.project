@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); * {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
   margin: 0px;
   padding: 0px;
   font-family: Poppins, sans-serif;
@@ -17,6 +18,7 @@ body {
   overflow: auto;
   padding-top: 90px;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 #profile {
@@ -49,7 +51,11 @@ body {
   font-size: 3rem;
   font-size: 6rem;
   text-align: center;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -75,6 +81,7 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  margin: 0 15px;
 }
 
 .btn {
@@ -126,9 +133,14 @@ header {
 }
 
 header .logo {
-  font-size: 30px;
-  text-transform: uppercase;
   color: white;
+}
+
+.logo img {
+  height: 70px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
 }
 
 header nav ul {
@@ -145,7 +157,8 @@ header nav ul li a {
   transition: all 0.2s ease 0s;
 }
 
-header nav ul li a:hover, header nav ul li a.active {
+header nav ul li a:hover,
+header nav ul li a.active {
   border-bottom-color: white;
 }
 
@@ -163,102 +176,105 @@ header nav ul li a:hover, header nav ul li a.active {
 
 @media only screen and (max-width: 700px) {
   body {
-      overflow: auto;
-      justify-content: center;
-      margin-top: 70px;
+    overflow: auto;
+    justify-content: center;
+    margin-top: 70px;
   }
 
   #profile {
-      position: static;
-      transform: none;
-      margin-top: 20px;
-      margin-bottom: 20px;
+    position: static;
+    transform: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .section__text {
-      margin-top: 100px;
+    margin-top: 100px;
   }
 
   .title {
-      font-size: 4rem;
+    font-size: 4rem;
   }
 
   .section__text__p2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .icon {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
 
   .btn-container {
-      flex-direction: column;
-      margin-top: 1rem;
+    flex-direction: column;
+    margin-top: 1rem;
   }
 
   .btn {
-      width: calc(100% - 20px);
-      margin: auto;
-      max-width: 500px;
+    width: calc(100% - 20px);
+    margin: auto;
+    max-width: 500px;
   }
 
   header {
-      height: auto;
-      padding: 10px;
+    height: auto;
+    padding: 10px;
   }
 
   header nav {
-      position: absolute;
-      width: 100%;
-      left: -100%;
-      top: 60px;
-      background: black;
-      padding: 190px 30px 30px;
-      transition: all 0.15s ease 0s;
-      height: 100vh;
-      overflow-y: auto;
-      font-size: 25px;
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    top: 60px;
+    background: black;
+    padding: 190px 30px 30px;
+    transition: all 0.15s ease 0s;
+    height: 100vh;
+    overflow-y: auto;
+    font-size: 25px;
   }
 
   header #nav_check:checked ~ nav {
-      left: 0px;
+    left: 0px;
   }
 
   header nav ul {
-      display: block;
-      text-align: center;
+    display: block;
+    text-align: center;
   }
 
   header nav ul li {
-      margin: 10px 0px;
+    margin: 10px 0px;
   }
 
   header nav ul li a {
-      margin: 5px 0px;
-      display: block;
-      color: white;
+    margin: 5px 0px;
+    display: block;
+    color: white;
   }
 
   header nav ul li a:hover {
-      color: black;
+    color: black;
   }
 
   .hamburger {
-      display: block;
+    display: block;
   }
 
   header nav ul {
-      display: block;
+    display: block;
   }
 }
 
-#projects, #services, #about, #contact, #story {
+#projects,
+#services,
+#about,
+#contact,
+#story {
   padding: 50px 20px;
   max-width: 1200px;
   width: 100%;
   margin: auto;
 }
-
 
 .section-title {
   font-size: 2.5rem;
@@ -286,13 +302,11 @@ header nav ul li a:hover, header nav ul li a.active {
 }
 
 .carousel-item {
-
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.19);
   border-radius: 10px;
   height: auto; /* Allow height to adjust based on content */
 }
-
 
 .carousel-item.active {
   transform: translateX(0px);
@@ -361,7 +375,8 @@ header nav ul li a:hover, header nav ul li a.active {
   margin-bottom: 5px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   padding: 15px;
   border: none;
   border-radius: 10px;
@@ -373,14 +388,13 @@ header nav ul li a:hover, header nav ul li a.active {
   resize: none;
 }
 
-input#email {
-}
-
-.contact-form input::placeholder, .contact-form textarea::placeholder{
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   border-color: white;
 }
 
@@ -451,7 +465,7 @@ input#email {
   border: 1px solid rgba(255, 255, 255, 0.24);
   padding: 20px;
   border-radius: 10px;
-  margin: 30px
+  margin: 30px;
 }
 
 .profile-glass-container {
@@ -503,9 +517,6 @@ input#email {
   color: white;
 }
 
-
-
-
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -519,10 +530,6 @@ input#email {
   border-radius: 10px;
 }
 
-body {
-  scroll-snap-type: y mandatory;
-}
-
 #home,
 #about,
 #projects,
@@ -531,40 +538,42 @@ body {
   scroll-snap-align: start;
 }
 
-
-.footer-bottom{
-  background: #0F0F0F;
+.footer-bottom {
+  background: #0f0f0f;
   width: 100vw;
   padding: 20px 0;
   text-align: center;
 }
-.footer-bottom p{
+.footer-bottom p {
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
 }
-.footer-bottom span{
+.footer-bottom span {
   text-transform: uppercase;
-  opacity: .4;
+  opacity: 0.4;
   font-weight: 200;
 }
 
 @media only screen and (max-width: 700px) {
-  .title {
-    transform: none !important; /* Disable cursor tracking */
-  }
 }
 
 @media only screen and (max-width: 700px) {
+  #projects,
+  #services,
+  #about,
+  #contact,
+  #story {
+    padding: 30px 20px;
+  }
+
   .carousel-item {
     margin-bottom: 20px;
   }
-}
 
-
-@media only screen and (max-width: 700px) {
-  /* Reduce padding between sections for smaller screens */
-  #projects, #services, #about, #contact, #story {
-    padding: 30px 20px; /* Adjust the padding as needed */
+  .title {
+    transform: none !important;
+    line-height: 80px;
+    padding: 15px 0;
   }
 }
