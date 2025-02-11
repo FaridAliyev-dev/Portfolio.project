@@ -93,6 +93,7 @@ body {
   color: white;
   background-color: rgb(53, 53, 53);
   border: 2px solid white;
+  cursor: pointer;
 }
 
 .btn-color-1 {
